@@ -9,37 +9,85 @@ header{
     background-color: black;
 
 }
-nav{
-    display: flex;
-    align-items:start;    
-    justify-content: space-between;
-    flex-wrap: wrap;
+.nav-bar {
     width: 100%;
-    padding-left: 9rem;
-    padding-right: 9rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-}
-
-nav ul li{
-    display: inline-block;
-    list-style: none;
-    margin: 10px 20px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: relative;
-    font-weight: bold;
-    text-transform: capitalize;
+    background-color: #191919;
+    padding: 12px 20px;
 }
 
-nav ul li a:hover {
-    transition: .4s;
-    color: #f9004d;
+.logo img {
+    width: 40px;
 }
+
+.menu {
+    display: flex;
+    
+    
+}
+
+.menu-2{
+    display: flex;
+}
+
+.menu li {
+    padding-left: 30px;
+    list-style-type: none;
+}
+
+.menu li a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    transition: 0.15s ease-in-out;
+    position: relative;
+    text-transform: uppercase;
+}
+
+
+.menu li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--color1);
+    transition: 0.15s ease-in-out;
+}
+
+.menu li a:hover:after {
+    width: 100%;
+}
+
+.open-menu,
+.close-menu {
+    position: absolute;
+    color: var(--color1);
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: none;
+}
+
+.open-menu {
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+.close-menu {
+    top: 20px;
+    right: 20px;
+}
+
+#check {
+    display: none;
+}
+
 
 .content {
     position: absolute;
@@ -135,6 +183,16 @@ h3 {
     padding: 100px 0px;
 }
 
+.serviced {
+    background-color: #191919;
+    width: 100%;
+    padding: 100px 0px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .title h2{
     color: white;
     font-size: 75px;
@@ -143,8 +201,17 @@ h3 {
     text-align: center;
 }
 
+.titled h2{
+    color: white;
+    font-size: 75px;
+    width: 1130px;
+    /* margin: 20px auto; */
+    text-align: center;
+}
+
 .box {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     min-height: 400px;
@@ -293,11 +360,6 @@ footer p:nth-child(2){
     color: #f9004d;
 }
 
-body{
-	height: 100vh;
-	width: 100%;
-}
-
 .container{
 	position: relative;
 	width: 100%;
@@ -305,7 +367,7 @@ body{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding: 20px 100px;
+	/* padding: 20px 100px; */
 }
 
 .container:after{
@@ -381,7 +443,7 @@ textarea{
 .btn{
 	width: 100%;
 	padding: 0.5rem 1rem;
-	background-color: #2ecc71;
+	background-color: red;
 	color: #fff;
 	font-size: 1.1rem;
 	border: none;
@@ -390,20 +452,158 @@ textarea{
 	transition: .3s;
 }
 
-.btn:hover{
+/* .btn:hover{
     background-color: #27ae60;
-}
+} */
 
 .field:focus{
     border: 2px solid rgba(30,85,250,0.47);
     background-color: #fff;
 }
 
-@media screen and (max-width: 880px){
+
+@media (max-width: 800px)
+{
 	.contact-box{
 		grid-template-columns: 1fr;
 	}
 	.left{
 		height: 200px;
 	}
+    h4{
+        color: #fcfc;
+        letter-spacing: 2px;
+        font-size: 19px;
+    }
+    
+    h1 {
+        color: white;
+        margin: 20px 0px 20px;
+        font-size: 40px;
+    }
+    .hero {
+        height: 60vh;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        background-color: #101010;
+        /* background-image: url(./images/back2.png); */
+        background-repeat: no-repeat;
+        background-size: 17rem;
+        background-position: center;
+    }
+
+    .content {
+        position: relative;
+        left: 8%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .service {
+        background: #101010;
+        width: 100%;
+        padding: 100px 0px;
+    }
+    .title h2{
+        color: white;
+        font-size: 40px;
+        width: 111px;
+        /* margin: 30px auto; */
+        text-align: center;
+    }
+    .serviced {
+        background: #101010;
+        width: 100%;
+        padding: 100px 0px;
+    }
+    .titled h2{
+        color: white;
+        font-size: 32px;
+        width: 170px;
+        margin: 30px auto;
+        text-align: center;
+    }
+    .about {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 100px 0px;
+        background-color: #191919;
+    }
+    
+    .about img {
+        height: auto;
+        width: 200px;
+    }
+    
+    .about-text {
+        width: 550px;
+    }
+
+    .about-text h2 {
+        color: white;
+        font-size: 45px;
+        text-transform: capitalize;
+        margin-bottom: 20px;
+    }
+    
+    .about-text p {
+        color: #fcfc;
+        letter-spacing: 1px;
+        line-height: 28px;
+        font-size: 14px;
+        margin-bottom: 45px;
+    }
+    .main{
+        width: 111px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 100;
+        background-color: #191919;
+        transition: all 0.2s ease-in-out;
+    }
+    .menu-2{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 100;
+        background-color: #191919;
+        transition: all 0.2s ease-in-out;
+    }
+    .menu li {
+        margin-top: 40px;
+    }
+
+    .menu li a {
+        padding: 10px;
+        text-decoration: none;
+    }
+
+    .open-menu,
+    .close-menu {
+        display: block;
+    }
+
+    #check:checked~.menu{
+        right: 0;
+    }
+
 }
