@@ -21,17 +21,29 @@
 <body>
     <header>
         <nav>
-            <img src="" alt="">
-            <ul>
-                <li><a href="#Home">Home</a></li>
-                <li><a href="#Events">Events</a></li>
-                <li><a href="#Contact_Us">Contact Us</a></li>
-            </ul>
+            
+            <div class='nav-bar'>
+                <a href='#'><img src='./images/logoo.png' alt="logo"/></a>
+                <input type='checkbox' id='check' />
+
+                <ul class="menu">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Events</a></li>
+                    <li><a href="">Contact Us</a></li>
+                    <li><label for="check" class="close-menu"><i class="fas fa-times"></i></label></li>
+                </ul>
+                <span class="menu-2">
+                    
+                </span>
+                <div><label for="check" class="open-menu"><i class="fas fa-bars"></i></label></div>
+            </div>
         </nav>
     </header>
 
+
     <!--Body Section-->
     <section class="hero">
+        <!-- <img src="images/back.png" alt=""> -->
         <div class="content">
             <h4>Welcome to </h4>
             <h1>CODE <span>FRONTIER</span></h1>
@@ -57,7 +69,7 @@
 
         <div class="box">
             <div class="card">
-                <i class="fas fa-bars"></i>
+                <i class="fa-solid fa-users"></i>
                 <h5>Hackathons</h5>
                 <div class="pra">
                     <p>We will host hackathons that unite diverse talents to tackle real-world challenges. These events
@@ -69,7 +81,7 @@
             </div>
 
             <div class="card">
-                <i class="fas fa-user"></i>
+                <i class="fa-solid fa-icons"></i>
                 <h5>Fun Times</h5>
                 <div class="pra">
                     <p>We'll have fun times or movie nights most Fridays to relax and unwind together. It's a great
@@ -84,9 +96,8 @@
                 <i class="fas fa-bell"></i>
                 <h5>Job Updates</h5>
                 <div class="pra">
-                    <p>We will also post updates on related job opportunities to keep you informed about new positions
-                        in your field. Whether you are experienced or just starting out, stay tuned for the latest job
-                        openings, industry trends, and career tips.</p>
+                    <p>We will share updates on job opportunities in your field. Stay tuned for the latest openings,
+                        industry trends, and career advice.</p>
                     <p style="text-align: center;">
                         <!-- <a href="#" class="button">Read More</a> -->
                     </p>
@@ -94,7 +105,7 @@
             </div>
 
             <div class="card">
-                <i class="fas fa-bell"></i>
+                <i class="fa-solid fa-user-plus"></i>
                 <h5>Conferences</h5>
                 <div class="pra">
                     <p>We will host conferences with prominent industry leaders who will share insights. These events
@@ -107,12 +118,17 @@
         </div>
     </div>
     <!---Contact Me Section Start-->
-    <div class="contact-me">
+
+    <div class="serviced">
+        <div class="titled">
+            <h2>Contact Us</h2>
+        </div>
         <div class="container">
+
             <div class="contact-box">
+
                 <div class="left"></div>
                 <div class="right">
-                    <h2>Contact Us</h2>
                     <input type="text" class="field" placeholder="Your Name">
                     <input type="text" class="field" placeholder="Your Email">
                     <input type="text" class="field" placeholder="Phone">
